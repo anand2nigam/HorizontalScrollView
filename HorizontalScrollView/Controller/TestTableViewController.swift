@@ -13,12 +13,16 @@ import SwiftyJSON
 class TestTableViewController: UITableViewController {
 
  
+    let apiURL = "http://swipestudio:coffeeboard@qa.swipestudio.co/api/feed"
     
+    let dataModel = TestDataModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.rowHeight = 150
+        
+        getData(url: apiURL)
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -32,7 +36,7 @@ class TestTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
+    // MARK: - TableView DataSource Methods
 
 
 
@@ -53,9 +57,55 @@ class TestTableViewController: UITableViewController {
     }
     
 
+    // MARK:- Networking
+    
+    func getData(url: String) {
+        Alamofire.request(apiURL, method: .get).responseJSON { (dataResponse) in
+            if dataResponse.result.isSuccess {
+                print("Got the data from the site")
+                
+               let dataInJSON = JSON(dataResponse.result.value!)
+                
+                print(dataInJSON)
+            } else {
+                print(" Error \(dataResponse.result.error)")
+            }
+        }
+    }
 
 
+    // MARK:- JSON Parsing
+    
+    func updateWithReceivedData(json: JSON) {
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
+
+// MARK:- CollectionView DataSource and Delegate Methods
 
 extension TestTableViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
