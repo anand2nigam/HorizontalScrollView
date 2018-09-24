@@ -14,6 +14,7 @@
 		1A9A97F12159262900C2D4E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A9A97EF2159262900C2D4E9 /* Main.storyboard */; };
 		1A9A97F32159262900C2D4E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A9A97F22159262900C2D4E9 /* Assets.xcassets */; };
 		1A9A97F62159262900C2D4E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A9A97F42159262900C2D4E9 /* LaunchScreen.storyboard */; };
+		575C78316F3A4C94DE5C7302 /* Pods_HorizontalScrollView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A6B73DE413CAB88CB6EDDD9 /* Pods_HorizontalScrollView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		1A9A97F22159262900C2D4E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A9A97F52159262900C2D4E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A9A97F72159262900C2D4E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9038F37CE084EA10E766D017 /* Pods-HorizontalScrollView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HorizontalScrollView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HorizontalScrollView/Pods-HorizontalScrollView.debug.xcconfig"; sourceTree = "<group>"; };
+		9A6B73DE413CAB88CB6EDDD9 /* Pods_HorizontalScrollView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HorizontalScrollView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4DD869DC17532D27BAF836D /* Pods-HorizontalScrollView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HorizontalScrollView.release.xcconfig"; path = "Pods/Target Support Files/Pods-HorizontalScrollView/Pods-HorizontalScrollView.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				575C78316F3A4C94DE5C7302 /* Pods_HorizontalScrollView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				1A9A97EA2159262900C2D4E9 /* HorizontalScrollView */,
 				1A9A97E92159262900C2D4E9 /* Products */,
+				794DDD1E5C2F92C12CCE5084 /* Pods */,
+				436BC242A7C65810AF006010 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +77,23 @@
 			path = HorizontalScrollView;
 			sourceTree = "<group>";
 		};
+		436BC242A7C65810AF006010 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A6B73DE413CAB88CB6EDDD9 /* Pods_HorizontalScrollView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		794DDD1E5C2F92C12CCE5084 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9038F37CE084EA10E766D017 /* Pods-HorizontalScrollView.debug.xcconfig */,
+				E4DD869DC17532D27BAF836D /* Pods-HorizontalScrollView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A9A97FA2159262900C2D4E9 /* Build configuration list for PBXNativeTarget "HorizontalScrollView" */;
 			buildPhases = (
+				65EA57BD551D4D0006B03387 /* [CP] Check Pods Manifest.lock */,
 				1A9A97E42159262900C2D4E9 /* Sources */,
 				1A9A97E52159262900C2D4E9 /* Frameworks */,
 				1A9A97E62159262900C2D4E9 /* Resources */,
+				5B8AB219B5A25162DA73DCBF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,6 +161,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5B8AB219B5A25162DA73DCBF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HorizontalScrollView/Pods-HorizontalScrollView-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HorizontalScrollView/Pods-HorizontalScrollView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65EA57BD551D4D0006B03387 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HorizontalScrollView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1A9A97E42159262900C2D4E9 /* Sources */ = {
@@ -286,6 +353,7 @@
 		};
 		1A9A97FB2159262900C2D4E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9038F37CE084EA10E766D017 /* Pods-HorizontalScrollView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -304,6 +372,7 @@
 		};
 		1A9A97FC2159262900C2D4E9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4DD869DC17532D27BAF836D /* Pods-HorizontalScrollView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
