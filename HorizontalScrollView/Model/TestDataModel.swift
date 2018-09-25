@@ -8,6 +8,28 @@
 
 import Foundation
 
-class TestDataModel {
-    var testTableArray = []
+//class TableDataView {
+//    let tableDataView: [CollectionDataView]
+//    
+//    init(tableDataView: [CollectionDataView]) {
+//        self.tableDataView = tableDataView
+//    }
+//    
+//}
+
+class CollectionDataView {
+    let collectionDataView:[DataView]
+    
+    init(collectionDataView: [DataView]) {
+        self.collectionDataView = collectionDataView
+    }
+}
+
+
+class DataView {
+    var title: String
+    
+    init(title: String) {
+        self.title = title
+    }
 }
